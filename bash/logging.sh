@@ -13,7 +13,7 @@ YELLOW="\e[33m"
 BLUE="\e[34m"
 CYAN="\e[36m"
 
-# Internal logging function
+# Internal logging function.
 _log() {
   local level="$1"
   local msg="$2"
@@ -28,7 +28,7 @@ _log() {
   fi
 }
 
-# Public functions
+# Public functions.
 info() { _log "INFO" "$1" "$BLUE"; }
 warn() { _log "WARN" "$1" "$YELLOW"; }
 error() { _log "ERROR" "$1" "$RED"; }

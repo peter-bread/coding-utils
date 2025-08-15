@@ -1,2 +1,3 @@
 # coding-utils
-Random code snippets that might be useful
+
+Random code snippets that might be useful.

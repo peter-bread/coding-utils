@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+# String -> Array --------------------------------------------------------------
+
+# Split using IFS (Internal Field Separator).
+
+str="one two three four"
+
+# Default IFS=' '.
+read -r -a arr1 <<<"$str"
+
+# If you wish you can customise IFS.
+IFS=' ' read -r -a arr2 <<<"$str"
+
+for el in "${arr1[@]}"; do
+  echo "$el"
+done
+
+for el in "${arr2[@]}"; do
+  echo "$el"
+done
+
+# Array -> String --------------------------------------------------------------
+
+# Join using IFS (Internal Field Separator).
+
+arr=("one" "two" "three" "four")
+
+# Default IFS=' '.
+str1="${arr[*]}"
+
+# If you wish you can customise IFS.
+str2=$(
+  IFS=' '
+  echo "${arr[*]}"
+)
+
+echo "$str1"
+echo "$str2"
+
+# Pass arrays to functions -----------------------------------------------------
+
+# TODO
